@@ -1,0 +1,2 @@
+# This file keeps the lib/ folder in git
+# The actual .jar files will be downloaded by download-jdbc.ps1

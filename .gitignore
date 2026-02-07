@@ -1,0 +1,68 @@
+# Compiled output
+bin/
+out/
+target/
+build/
+*.class
+
+# Library files (download via script)
+lib/*.jar
+
+# Database
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+
+# IDE - NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Backup and temporary files
+*~
+*.bak
+*.tmp
+*.swp
+*.swo
+.*.sw?
+
+# Package files (application outputs)
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Exception: Keep lib folder structure but ignore jar files
+!lib/
+lib/*.jar
