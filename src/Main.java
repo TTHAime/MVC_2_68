@@ -73,7 +73,7 @@ public class Main {
                     "ศูนย์พักพิงศาลาประชาคม"
             };
 
-            int[] capacities = { 100, 150, 80, 120, 200, 90, 70, 110 };
+            int[] capacities = { 100, 150, 80, 120, 200, 90, 70, 1 };
             Shelter.RiskLevel[] riskLevels = {
                     Shelter.RiskLevel.LOW,
                     Shelter.RiskLevel.LOW,
