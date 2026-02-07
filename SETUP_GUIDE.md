@@ -30,6 +30,7 @@ setup.bat
 ```
 
 Script นี้จะ:
+
 - ✓ ดาวน์โหลด SQLite JDBC Driver อัตโนมัติ
 - ✓ Compile โปรเจกต์ทั้งหมด
 - ✓ พร้อมใช้งานทันที
@@ -54,11 +55,13 @@ cd MVC_2_68
 ### ขั้นตอนที่ 2: ดาวน์โหลด SQLite JDBC Driver
 
 **วิธีที่ 1: ใช้ PowerShell Script (แนะนำ)**
+
 ```powershell
 powershell -ExecutionPolicy Bypass -File download-jdbc.ps1
 ```
 
 **วิธีที่ 2: ดาวน์โหลดด้วยตัวเอง**
+
 1. ไปที่ https://github.com/xerial/sqlite-jdbc/releases
 2. ดาวน์โหลด `sqlite-jdbc-3.42.0.0.jar`
 3. วางไฟล์ในโฟลเดอร์ `lib/` (สร้างโฟลเดอร์ถ้ายังไม่มี)
@@ -99,22 +102,27 @@ MVC_2_68/
 ## ❓ FAQ - คำถามที่พบบ่อย
 
 ### Q: ทำไม lib/ ว่างเปล่า?
+
 **A:** ไฟล์ .jar ไม่ถูกเก็บใน Git เพื่อลดขนาด repository  
 ต้องดาวน์โหลดเองหลัง clone โดยใช้ `download-jdbc.ps1`
 
 ### Q: เกิดข้อผิดพลาด "javac is not recognized"
+
 **A:** ต้องติดตั้ง JDK และตั้งค่า PATH environment variable  
 ดู: https://www.java.com/en/download/help/path.html
 
 ### Q: เกิดข้อผิดพลาด "UnsupportedClassVersionError"
+
 **A:** Java version ที่ใช้รันต่ำกว่าที่ใช้ compile  
 แก้ไข: compile.bat ให้ระบุ `-source 8 -target 8`
 
 ### Q: โปรแกรมรันแล้วไม่มีข้อมูล
+
 **A:** ปกติโปรแกรมจะสร้างข้อมูลตัวอย่าง 35 คนอัตโนมัติในครั้งแรก  
 ถ้าไม่มี ให้ลบไฟล์ `shelter_system.db` แล้วรันใหม่
 
 ### Q: ต้องการลบข้อมูลทั้งหมดเริ่มใหม่
+
 **A:** ลบไฟล์ `shelter_system.db` แล้วรันโปรแกรมใหม่
 
 ---
@@ -126,6 +134,7 @@ MVC_2_68/
 **อาการ:** `cannot be loaded because running scripts is disabled`
 
 **วิธีแก้:**
+
 ```powershell
 # รันด้วยคำสั่งนี้แทน
 powershell -ExecutionPolicy Bypass -File download-jdbc.ps1
@@ -142,7 +151,8 @@ powershell -ExecutionPolicy Bypass -File download-jdbc.ps1
 
 **อาการ:** `database is locked`
 
-**วิธีแก้:** 
+**วิธีแก้:**
+
 1. ปิดโปรแกรมทุก instance
 2. ลบไฟล์ `shelter_system.db-journal` ถ้ามี
 3. รันโปรแกรมใหม่
@@ -160,6 +170,7 @@ powershell -ExecutionPolicy Bypass -File download-jdbc.ps1
 ### การ Commit ไฟล์ใหม่
 
 ไฟล์เหล่านี้ **ไม่ควร** commit ขึ้น Git:
+
 - `bin/` - compiled classes
 - `lib/*.jar` - JDBC driver
 - `*.db` - database files
@@ -170,6 +181,7 @@ powershell -ExecutionPolicy Bypass -File download-jdbc.ps1
 ### การแก้ไขโค้ด
 
 หลังแก้ไขไฟล์ในโฟลเดอร์ `src/`:
+
 ```batch
 compile.bat
 run.bat

@@ -99,6 +99,7 @@ MVC_2_68/
 ```
 
 จากนั้นรันโปรแกรม:
+
 ```batch
 .\run.bat
 ```
@@ -106,16 +107,19 @@ MVC_2_68/
 ### วิธีที่ 2: ทำทีละขั้นตอน
 
 **1. ดาวน์โหลด SQLite JDBC Driver:**
+
 ```powershell
 .\download-jdbc.ps1
 ```
 
 **2. Compile โปรเจกต์:**
+
 ```batch
 .\compile.bat
 ```
 
 **3. Run โปรแกรม:**
+
 ```batch
 .\run.bat
 ```
